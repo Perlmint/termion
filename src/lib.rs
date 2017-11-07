@@ -19,6 +19,10 @@ mod sys;
 #[path="sys/unix/mod.rs"]
 mod sys;
 
+#[cfg(windows)]
+#[path="sys/windows/mod.rs"]
+mod sys;
+
 pub use sys::size::terminal_size;
 pub use sys::tty::{is_tty, get_tty};
 
